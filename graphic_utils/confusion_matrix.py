@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 import numpy as np
 import matplotlib.pyplot as plt
 import itertools
@@ -30,3 +32,16 @@ def plot_confusion_matrix(cm, classes,
     plt.tight_layout()
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
+
+
+def get_summary(confusion_mtx):
+    summary = defaultdict()
+    for num in range(10):
+        hit = confusion_mtx[num][num]
+        loss = 0
+        for i in range(0, 10):
+            if i != num:
+                loss += confusion_mtx[num][i]
+                loss += confusion_mtx[i][num]
+        summary[num] = f'{float(100 * hit / (hit + loss)) : .2f}'
+    return summary
