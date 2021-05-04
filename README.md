@@ -7,8 +7,7 @@ Topics have been covered so far:
 
 * basics of TensorFlow (NumPy, Pandas, Keras)
 * implementation of Convolutional Neural Network for digits recognition trained on 
-  MNIST dataset (https://en.wikipedia.org/wiki/MNIST_database).
-* implementation of RNN for time series forecasting
+  MNIST dataset (https://en.wikipedia.org/wiki/MNIST_database) - DNN, CNN
 
 Installation
 =============
@@ -37,7 +36,7 @@ Jupyter notebook was added for experiments and as a PoC, but the whole code is w
 
 ## Neural Network for digits recognition
 
-There are 4 models implemented
+Total 3 models were implemented
 
 ### Dense Neural Network (DNN)
 
@@ -56,3 +55,4 @@ as compared to other classification algorithms.
 
 ### Hyper parameter tuning
 
+https://en.wikipedia.org/wiki/Hyperparameter_optimization
